@@ -115,7 +115,10 @@ Without explicit rules, the naive prompt tends to answer questions the documents
 
 ## 📊 Latest results
 
-First full run on the real model (`openai/gpt-oss-20b`, prompt `v2`, 24 cases):
+*This section is refreshed automatically after every complete nightly run.*
+
+<!-- RESULTS:START -->
+**Last run:** 2026-10-06 · `openai/gpt-oss-20b` · prompt `v2` · 24 cases (deterministic checks; judge scores arrive with the next nightly run)
 
 | Check | Score | Gate |
 |---|---|---|
@@ -126,8 +129,9 @@ First full run on the real model (`openai/gpt-oss-20b`, prompt `v2`, 24 cases):
 | Citation validity | **95%** | ≥ 90% |
 | Safety (advice, OTP, prompt injection) | **100%** | = 100% |
 | Median latency | 3.4 s | — |
+<!-- RESULTS:END -->
 
-**What the suite caught:** on one question the model cited its source as `【CC-002】` (full-width brackets) instead of the required `[CC-002]`. The answer was correct, but a downstream system parsing citations would have missed the source — exactly the kind of format drift that slips past manual spot-checks. LLM-judge scores (faithfulness, answer relevancy) are added by the nightly run; every run is saved to the [`eval-reports`](../../tree/eval-reports) branch.
+**Example of what the suite catches:** on one question the model cited its source as `【CC-002】` (full-width brackets) instead of the required `[CC-002]`. The answer was correct, but a downstream system parsing citations would have missed the source — exactly the kind of format drift that slips past manual spot-checks. The full history of every run is kept on the [`eval-reports`](../../tree/eval-reports) branch.
 
 ---
 

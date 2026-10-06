@@ -42,6 +42,8 @@ jobs:
       PROMPT_VERSION: ${{ github.event.inputs.prompt_version || 'v2' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Skip when no API key is configured
         if: env.GROQ_API_KEY == ''
         run: echo "::notice::Add a GROQ_API_KEY repository secret to enable the LLM quality gate."
@@ -63,6 +65,22 @@ jobs:
       - name: Publish report to the job summary
         if: always() && env.GROQ_API_KEY != ''
         run: test -f reports/latest.md && cat reports/latest.md >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Refresh README with the latest results
+        if: always() && env.GROQ_API_KEY != '' && github.ref == 'refs/heads/main'
+        run: |
+          test -f reports/latest.json || exit 0
+          git fetch -q origin eval-reports:refs/remotes/origin/eval-reports 2>/dev/null \
+            && git show origin/eval-reports:latest.json > "$RUNNER_TEMP/previous.json" 2>/dev/null || true
+          PYTHONPATH=src:. python -m evals.update_readme reports/latest.json --previous "$RUNNER_TEMP/previous.json"
+          if ! git diff --quiet README.md; then
+            # Committed under the repo owner's identity so the bot doesn't appear as a contributor.
+            git config user.name "Shivam Tayal"
+            git config user.email "71970833+tayalshivam@users.noreply.github.com"
+            git add README.md
+            git commit -qm "Update latest evaluation results [skip ci]"
+            git pull -q --rebase origin main
+            git push -q origin HEAD:main
+          fi
       - name: Save report history to the eval-reports branch
         if: always() && env.GROQ_API_KEY != '' && github.ref == 'refs/heads/main'
         run: |
