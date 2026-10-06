@@ -30,6 +30,8 @@ jobs:
     name: LLM quality gate
     needs: unit-tests
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       LLM_PROVIDER: groq
@@ -57,6 +59,26 @@ jobs:
       - name: Publish report to the job summary
         if: always() && env.GROQ_API_KEY != ''
         run: test -f reports/latest.md && cat reports/latest.md >> "$GITHUB_STEP_SUMMARY" || true
+      - name: Save report history to the eval-reports branch
+        if: always() && env.GROQ_API_KEY != '' && github.ref == 'refs/heads/main'
+        run: |
+          test -f reports/latest.json || exit 0
+          cp reports/latest.md reports/latest.json "$RUNNER_TEMP/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin eval-reports >/dev/null; then
+            git fetch -q origin eval-reports && git checkout -q -f eval-reports
+          else
+            git checkout -q --orphan eval-reports && git rm -rfq .
+          fi
+          stamp=$(date -u +%Y%m%d-%H%M%S)
+          mkdir -p runs
+          cp "$RUNNER_TEMP/latest.md" latest.md
+          cp "$RUNNER_TEMP/latest.json" latest.json
+          cp "$RUNNER_TEMP/latest.json" "runs/$stamp-$PROMPT_VERSION.json"
+          git add latest.md latest.json runs
+          git commit -qm "Eval report $stamp (prompt $PROMPT_VERSION)"
+          git push -q origin eval-reports
       - uses: actions/upload-artifact@v4
         if: always() && env.GROQ_API_KEY != ''
         with:

@@ -253,6 +253,11 @@ def main(argv: list[str] | None = None) -> int:
     print(f"\nRelease decision: {decision}")
     for r in reasons:
         print(f"  - {r}")
+    if os.getenv("GITHUB_ACTIONS"):
+        metrics_line = " · ".join(f"{k}={_fmt(v)}" for k, v in summary.items() if v is not None)
+        print(f"::notice title=Release decision: {decision}::{metrics_line}")
+        for r in reasons[:9]:
+            print(f"::warning title=Gate failed::{r}")
     print(f"Report: {(args.output_dir / 'latest.md').relative_to(PROJECT_ROOT) if args.output_dir.is_relative_to(PROJECT_ROOT) else args.output_dir / 'latest.md'}")
     return 0 if decision == "GO" else 1
 
