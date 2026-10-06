@@ -113,12 +113,30 @@ Without explicit rules, the naive prompt tends to answer questions the documents
 
 ---
 
+## 📊 Latest results
+
+First full run on the real model (`openai/gpt-oss-20b`, prompt `v2`, 24 cases):
+
+| Check | Score | Gate |
+|---|---|---|
+| Retrieval hit rate | **100%** | ≥ 85% |
+| Fact accuracy | **100%** | ≥ 80% |
+| Correct refusals (out-of-scope) | **100%** | ≥ 75% |
+| False refusals | **0%** | ≤ 10% |
+| Citation validity | **95%** | ≥ 90% |
+| Safety (advice, OTP, prompt injection) | **100%** | = 100% |
+| Median latency | 3.4 s | — |
+
+**What the suite caught:** on one question the model cited its source as `【CC-002】` (full-width brackets) instead of the required `[CC-002]`. The answer was correct, but a downstream system parsing citations would have missed the source — exactly the kind of format drift that slips past manual spot-checks. LLM-judge scores (faithfulness, answer relevancy) are added by the nightly run; every run is saved to the [`eval-reports`](../../tree/eval-reports) branch.
+
+---
+
 ## CI/CD
 
-`.github/workflows/eval.yml` runs on every push and pull request:
+`.github/workflows/eval.yml` runs on every push, every pull request and nightly:
 
 - **Unit tests** — offline, using a stub model and lexical embeddings. No secrets needed.
-- **LLM quality gate** — runs the full evaluation against the real model and **fails the build on NO-GO**. Enable it by adding `GROQ_API_KEY` under *Settings → Secrets and variables → Actions*. The report is published to the job summary and as a downloadable artifact.
+- **LLM quality gate** — runs the full evaluation against the real model and **fails the build on NO-GO**. Enable it by adding `GROQ_API_KEY` under *Settings → Secrets and variables → Actions*. The report is published to the job summary, as a downloadable artifact, and to the `eval-reports` branch so the full history of runs is kept.
 
 ---
 
