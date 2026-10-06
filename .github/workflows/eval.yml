@@ -30,6 +30,7 @@ jobs:
     name: LLM quality gate
     needs: unit-tests
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: write
     env:
@@ -55,7 +56,8 @@ jobs:
         run: PYTHONPATH=src python -m bankrag.ingest
       - name: Run evaluation and release gate
         if: env.GROQ_API_KEY != ''
-        run: PYTHONPATH=src:. python -m evals.run_eval
+        # Two core judge metrics keep a full run inside the Groq free tier.
+        run: PYTHONPATH=src:. python -m evals.run_eval --metrics faithfulness,answer_relevancy
       - name: Publish report to the job summary
         if: always() && env.GROQ_API_KEY != ''
         run: test -f reports/latest.md && cat reports/latest.md >> "$GITHUB_STEP_SUMMARY" || true

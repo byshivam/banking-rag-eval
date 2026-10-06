@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from bankrag.config import PROJECT_ROOT, get_settings
+from bankrag.llm import QuotaExhaustedError
 from bankrag.rag import RAGAssistant, RAGResponse
 from evals.checks import CheckResults, run_checks
 from evals.dataset import GoldenCase, load_golden_set
@@ -68,6 +69,8 @@ def judge_case(case: GoldenCase, response: RAGResponse, metrics: dict) -> dict:
         try:
             metric.measure(test_case)
             results[name] = {"score": round(float(metric.score), 3), "reason": metric.reason}
+        except QuotaExhaustedError:
+            raise
         except Exception as exc:  # one flaky judge call should not kill the whole run
             results[name] = {"score": None, "reason": f"judge error: {exc}"}
     return results
@@ -201,8 +204,14 @@ def main(argv: list[str] | None = None) -> int:
     thresholds = json.loads(THRESHOLDS_PATH.read_text())
 
     records = []
+    incomplete: list[str] = []
     for i, case in enumerate(cases, 1):
-        response = assistant.answer(case.question)
+        try:
+            response = assistant.answer(case.question)
+        except QuotaExhaustedError as exc:
+            incomplete.append(f"stopped after {i - 1} of {len(cases)} cases: {exc}")
+            print(f"[{i:>2}/{len(cases)}] {exc}", flush=True)
+            break
         checks: CheckResults = run_checks(case, response)
         record = {
             "id": case.id,
@@ -216,7 +225,13 @@ def main(argv: list[str] | None = None) -> int:
         }
         # Judge only real answers: refusals are already scored by the refusal checks.
         if metrics and not case.must_refuse and not checks.false_refusal:
-            record["judge"] = judge_case(case, response, metrics)
+            try:
+                record["judge"] = judge_case(case, response, metrics)
+            except QuotaExhaustedError as exc:
+                incomplete.append(f"LLM judge stopped at case {case.id}: {exc}")
+                print(f"  judge disabled: {exc}", flush=True)
+                metrics = {}
+                record["judge"] = {}
             for name, res in record["judge"].items():
                 gate = thresholds["min"].get(name)
                 if res["score"] is not None and gate is not None and res["score"] < gate:
@@ -228,6 +243,8 @@ def main(argv: list[str] | None = None) -> int:
     summary = aggregate(records)
     baseline = json.loads(BASELINE_PATH.read_text()) if BASELINE_PATH.exists() and not args.update_baseline else None
     decision, reasons = decide(summary, baseline, thresholds)
+    if incomplete:
+        decision, reasons = "NO-GO", [f"evaluation incomplete — {r}" for r in incomplete] + reasons
 
     report = {
         "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),

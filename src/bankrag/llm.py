@@ -23,6 +23,15 @@ class LLMClient(Protocol):
     ) -> str: ...
 
 
+class QuotaExhaustedError(RuntimeError):
+    """The provider's daily quota is used up — retrying now will not help."""
+
+
+def _is_daily_limit(exc: Exception) -> bool:
+    text = str(exc).lower()
+    return any(marker in text for marker in ("per day", "tokens per day", "requests per day", "(tpd)", "(rpd)"))
+
+
 class GroqClient:
     def __init__(self, settings: Settings, model: str, max_retries: int = 6):
         if not settings.groq_api_key:
@@ -54,11 +63,20 @@ class GroqClient:
                     **kwargs,
                 )
                 return response.choices[0].message.content or ""
-            except (RateLimitError, APIConnectionError, InternalServerError):
+            except RateLimitError as exc:
+                if _is_daily_limit(exc):
+                    raise QuotaExhaustedError(
+                        f"Groq daily limit reached for {self.model}. It resets within 24 hours; "
+                        "meanwhile use --limit or fewer --metrics."
+                    ) from exc
                 if attempt == self.max_retries - 1:
                     raise
-                # Free-tier rate limits are per minute; back off and try again.
-                time.sleep(min(60, 2 ** (attempt + 1)))
+                # Per-minute limits clear quickly; back off and try again.
+                time.sleep(min(30, 2 ** (attempt + 1)))
+            except (APIConnectionError, InternalServerError):
+                if attempt == self.max_retries - 1:
+                    raise
+                time.sleep(min(30, 2 ** (attempt + 1)))
         raise RuntimeError("unreachable")
 
 
