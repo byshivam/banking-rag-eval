@@ -258,4 +258,11 @@ def main(argv: list[str] | None = None) -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as exc:
+        # Surface setup errors (bad key, retired model, rate limit) as a clear CI annotation.
+        message = f"{type(exc).__name__}: {exc}".replace("\n", " ")[:900]
+        if os.getenv("GITHUB_ACTIONS"):
+            print(f"::error title=Evaluation crashed::{message}")
+        raise

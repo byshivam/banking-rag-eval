@@ -24,10 +24,10 @@ class Settings:
         default_factory=lambda: _env("GROQ_BASE_URL", "https://api.groq.com/openai/v1")
     )
     generator_model: str = field(
-        default_factory=lambda: _env("GENERATOR_MODEL", "llama-3.1-8b-instant")
+        default_factory=lambda: _env("GENERATOR_MODEL", "openai/gpt-oss-20b")
     )
     judge_model: str = field(
-        default_factory=lambda: _env("JUDGE_MODEL", "llama-3.3-70b-versatile")
+        default_factory=lambda: _env("JUDGE_MODEL", "openai/gpt-oss-120b")
     )
     prompt_version: str = field(default_factory=lambda: _env("PROMPT_VERSION", "v2"))
     # "groq" uses the real API; "stub" is a deterministic offline fake for unit tests.
