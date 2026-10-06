@@ -4,7 +4,7 @@
 
 Every prompt or model change is scored for **factual accuracy, faithfulness to source documents, correct refusals, citation integrity and safety**, compared against an approved baseline, and turned into an evidence-backed **GO / NO-GO release decision** that runs automatically in CI.
 
-![CI](https://github.com/tayalshivam/banking-rag-eval/actions/workflows/eval.yml/badge.svg)
+![CI](https://github.com/byshivam/banking-rag-eval/actions/workflows/eval.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![DeepEval](https://img.shields.io/badge/eval-DeepEval-6C47FF)
 ![Groq](https://img.shields.io/badge/LLM-Groq%20(free)-F55036)
@@ -68,7 +68,7 @@ The knowledge base is five policy documents for **Arya Bank, a fictional Indian 
 ## Quickstart (100% free)
 
 ```bash
-git clone https://github.com/tayalshivam/banking-rag-eval.git
+git clone https://github.com/byshivam/banking-rag-eval.git
 cd banking-rag-eval
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -176,4 +176,4 @@ reports/              Baseline and latest reports
 
 ---
 
-Built by [Shivam Tayal](https://github.com/tayalshivam) — AI Quality Engineer. Part of a series on evaluating GenAI systems for regulated industries.
+Built by [Shivam Tayal](https://github.com/byshivam) — AI Quality Engineer. Part of a series on evaluating GenAI systems for regulated industries.
