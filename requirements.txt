@@ -1,0 +1,2 @@
+-r requirements-core.txt
+sentence-transformers>=3.0

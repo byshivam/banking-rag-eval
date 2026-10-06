@@ -1,0 +1,64 @@
+name: RAG evaluation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      prompt_version:
+        description: "Prompt version to evaluate (v2, v1_naive)"
+        default: "v2"
+
+jobs:
+  unit-tests:
+    name: Unit tests (offline)
+    runs-on: ubuntu-latest
+    env:
+      LLM_PROVIDER: stub
+      EMBEDDING_BACKEND: hash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements-core.txt
+      - run: pytest -m "not llm" -q
+
+  quality-gate:
+    name: LLM quality gate
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      LLM_PROVIDER: groq
+      EMBEDDING_BACKEND: sentence-transformers
+      PROMPT_VERSION: ${{ github.event.inputs.prompt_version || 'v2' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skip when no API key is configured
+        if: env.GROQ_API_KEY == ''
+        run: echo "::notice::Add a GROQ_API_KEY repository secret to enable the LLM quality gate."
+      - uses: actions/setup-python@v5
+        if: env.GROQ_API_KEY != ''
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies (CPU-only torch)
+        if: env.GROQ_API_KEY != ''
+        run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+      - name: Build the vector index
+        if: env.GROQ_API_KEY != ''
+        run: PYTHONPATH=src python -m bankrag.ingest
+      - name: Run evaluation and release gate
+        if: env.GROQ_API_KEY != ''
+        run: PYTHONPATH=src:. python -m evals.run_eval
+      - name: Publish report to the job summary
+        if: always() && env.GROQ_API_KEY != ''
+        run: test -f reports/latest.md && cat reports/latest.md >> "$GITHUB_STEP_SUMMARY" || true
+      - uses: actions/upload-artifact@v4
+        if: always() && env.GROQ_API_KEY != ''
+        with:
+          name: eval-report-${{ env.PROMPT_VERSION }}
+          path: reports/latest.*
