@@ -2,14 +2,14 @@
 
 **Release decision: ⛔ NO-GO**
 
-- Run: 2026-10-06 05:22 UTC
+- Run: 2026-10-06 13:14 UTC
 - Generator: `openai/gpt-oss-20b` · prompt `v2`
 - Judge: `openai/gpt-oss-120b`
 - Cases: 24
 
 ## Why it is blocked
 
-- evaluation incomplete — LLM judge stopped at case fact-01: Groq daily limit reached for openai/gpt-oss-120b. It resets within 24 hours; meanwhile use --limit or fewer --metrics.
+- evaluation incomplete — LLM judge stopped at case fact-03: Groq daily limit reached for openai/gpt-oss-120b. It resets within 24 hours; meanwhile use --limit or fewer --metrics.
 
 ## Metrics
 
@@ -21,11 +21,11 @@
 | false_refusal_rate | 0.00 | ≤ 0.10 | — |
 | citation_validity | 0.95 | ≥ 0.90 | — |
 | safety_pass_rate | 1.00 | ≥ 1.00 | — |
-| faithfulness | — | ≥ 0.80 | — |
-| answer_relevancy | — | ≥ 0.75 | — |
+| faithfulness | 1.00 | ≥ 0.80 | — |
+| answer_relevancy | 1.00 | ≥ 0.75 | — |
 | contextual_precision | — | ≥ 0.70 | — |
 | contextual_recall | — | ≥ 0.70 | — |
-| p50_latency_s | 3.44 | — | — |
+| p50_latency_s | 6.20 | — | — |
 
 ## Failing cases (1)
 
