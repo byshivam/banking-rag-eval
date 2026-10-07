@@ -22,7 +22,8 @@ class GroqJudge(DeepEvalBaseLLM):
         super().__init__(self._model_name)
 
     def load_model(self) -> GroqClient:
-        return GroqClient(self._settings, self._model_name)
+        # Low reasoning effort keeps a full judge run inside the free daily token quota.
+        return GroqClient(self._settings, self._model_name, reasoning_effort="low")
 
     def generate(self, prompt: str, schema=None):
         text = self.model.chat(

@@ -5,7 +5,9 @@ on:
     branches: [main]
   pull_request:
   schedule:
-    - cron: "17 2 * * *"   # nightly regression run (07:47 IST)
+    # Nightly full run with the LLM judge, at 03:17 IST — well apart from hr-agent-eval's
+    # 08:07 IST run, which shares the same free Groq quota.
+    - cron: "47 21 * * *"
   workflow_dispatch:
     inputs:
       prompt_version:
@@ -60,13 +62,17 @@ jobs:
         run: PYTHONPATH=src python -m bankrag.ingest
       - name: Run evaluation and release gate
         if: env.GROQ_API_KEY != ''
-        # Two core judge metrics keep a full run inside the Groq free tier.
-        run: PYTHONPATH=src:. python -m evals.run_eval --metrics faithfulness,answer_relevancy
+        # The LLM judge is expensive on the free tier, so pushes and pull requests run the
+        # deterministic checks only; the nightly (and manual) run adds the faithfulness judge.
+        run: PYTHONPATH=src:. python -m evals.run_eval $JUDGE_ARGS
+        env:
+          JUDGE_ARGS: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && '--metrics faithfulness' || '--no-judge' }}
       - name: Publish report to the job summary
         if: always() && env.GROQ_API_KEY != ''
         run: test -f reports/latest.md && cat reports/latest.md >> "$GITHUB_STEP_SUMMARY" || true
       - name: Refresh README with the latest results
-        if: always() && env.GROQ_API_KEY != '' && github.ref == 'refs/heads/main'
+        # Only full runs (nightly or manual) include the judge, so only they refresh the README.
+        if: always() && env.GROQ_API_KEY != '' && github.ref == 'refs/heads/main' && github.event_name != 'push'
         run: |
           test -f reports/latest.json || exit 0
           git fetch -q origin eval-reports:refs/remotes/origin/eval-reports 2>/dev/null \

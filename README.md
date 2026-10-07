@@ -144,7 +144,7 @@ Without explicit rules, the naive prompt tends to answer questions the documents
 
 ## CI/CD
 
-`.github/workflows/eval.yml` runs on every push, every pull request and nightly:
+`.github/workflows/eval.yml` runs on every push, every pull request and nightly. The LLM judge is the expensive part on the free tier, so pushes and pull requests run the deterministic checks only, and the nightly run (03:17 IST) adds the faithfulness judge:
 
 - **Unit tests** — offline, using a stub model and lexical embeddings. No secrets needed.
 - **LLM quality gate** — runs the full evaluation against the real model and **fails the build on NO-GO**. Enable it by adding `GROQ_API_KEY` under *Settings → Secrets and variables → Actions*. The report is published to the job summary, as a downloadable artifact, and to the `eval-reports` branch so the full history of runs is kept.

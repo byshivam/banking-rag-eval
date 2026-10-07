@@ -33,7 +33,7 @@ def _is_daily_limit(exc: Exception) -> bool:
 
 
 class GroqClient:
-    def __init__(self, settings: Settings, model: str, max_retries: int = 6):
+    def __init__(self, settings: Settings, model: str, max_retries: int = 6, reasoning_effort: str | None = None):
         if not settings.groq_api_key:
             raise RuntimeError(
                 "GROQ_API_KEY is not set. Copy .env.example to .env and add your free key "
@@ -43,6 +43,7 @@ class GroqClient:
 
         self.model = model
         self.max_retries = max_retries
+        self.reasoning_effort = reasoning_effort
         self._client = OpenAI(api_key=settings.groq_api_key, base_url=settings.groq_base_url)
 
     def chat(
@@ -50,7 +51,10 @@ class GroqClient:
     ) -> str:
         from openai import APIConnectionError, InternalServerError, RateLimitError
 
-        kwargs = {"response_format": {"type": "json_object"}} if json_mode else {}
+        kwargs: dict = {"response_format": {"type": "json_object"}} if json_mode else {}
+        if self.reasoning_effort:
+            # Reasoning tokens count against the daily quota.
+            kwargs["extra_body"] = {"reasoning_effort": self.reasoning_effort}
         for attempt in range(self.max_retries):
             try:
                 response = self._client.chat.completions.create(
