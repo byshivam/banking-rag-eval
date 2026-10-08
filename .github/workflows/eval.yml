@@ -81,7 +81,7 @@ jobs:
           if ! git diff --quiet README.md; then
             # Committed under the repo owner's identity so the bot doesn't appear as a contributor.
             git config user.name "Shivam Tayal"
-            git config user.email "71970833+byshivam@users.noreply.github.com"
+            git config user.email "71970833+tayalshivam@users.noreply.github.com"
             git add README.md
             git commit -qm "Update latest evaluation results [skip ci]"
             git pull -q --rebase origin main
@@ -92,8 +92,8 @@ jobs:
         run: |
           test -f reports/latest.json || exit 0
           cp reports/latest.md reports/latest.json "$RUNNER_TEMP/"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "Shivam Tayal"
+          git config user.email "71970833+tayalshivam@users.noreply.github.com"
           if git ls-remote --exit-code --heads origin eval-reports >/dev/null; then
             git fetch -q origin eval-reports && git checkout -q -f eval-reports
           else
