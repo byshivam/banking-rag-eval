@@ -2,7 +2,7 @@
 
 **Release decision: ⛔ NO-GO**
 
-- Run: 2026-10-14 00:45 UTC
+- Run: 2026-10-15 00:15 UTC
 - Generator: `openai/gpt-oss-20b` · prompt `v2`
 - Judge: `openai/gpt-oss-120b`
 - Cases: 24
@@ -25,7 +25,7 @@
 | answer_relevancy | — | ≥ 0.75 | — |
 | contextual_precision | — | ≥ 0.70 | — |
 | contextual_recall | — | ≥ 0.70 | — |
-| p50_latency_s | 0.43 | — | — |
+| p50_latency_s | 0.45 | — | — |
 
 ## Failing cases (2)
 

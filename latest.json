@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-14 00:45 UTC",
+  "run_at": "2026-10-15 00:15 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.428
+    "p50_latency_s": 0.445
   },
   "baseline_summary": null,
   "thresholds": {
@@ -51,94 +51,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.703,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
-        }
-      }
-    },
-    {
-      "id": "fact-02",
-      "category": "factual",
-      "question": "How often is interest credited to my savings account?",
-      "answer": "Interest is credited to your savings account quarterly, on the last day of June, September, December, and March. [SAV-001]",
-      "retrieved": [
-        "SAV-001#1",
-        "CC-002#2",
-        "SAV-001#4",
-        "SAV-001#5"
-      ],
-      "latency_s": 0.258,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
-        }
-      }
-    },
-    {
-      "id": "fact-03",
-      "category": "factual",
-      "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
-      "answer": "The Arya Voyager credit card has an annual fee of ₹2,500. This fee can be waived if the cardholder’s total annual spend exceeds ₹3,00,000. [CC-002]",
-      "retrieved": [
-        "CC-002#4",
-        "CC-002#1",
-        "CC-002#2",
-        "CC-002#6"
-      ],
-      "latency_s": 0.271,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
-        }
-      }
-    },
-    {
-      "id": "fact-04",
-      "category": "factual",
-      "question": "What is the finance charge on revolving credit card balances?",
-      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
-      "retrieved": [
-        "CC-002#2",
-        "CC-002#3",
-        "CC-002#4",
-        "CC-002#1"
-      ],
-      "latency_s": 0.395,
+      "latency_s": 0.324,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -157,6 +70,93 @@
       }
     },
     {
+      "id": "fact-02",
+      "category": "factual",
+      "question": "How often is interest credited to my savings account?",
+      "answer": "Interest is credited to your savings account quarterly, on the last day of June, September, December, and March. [SAV-001]",
+      "retrieved": [
+        "SAV-001#1",
+        "CC-002#2",
+        "SAV-001#4",
+        "SAV-001#5"
+      ],
+      "latency_s": 0.294,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+        }
+      }
+    },
+    {
+      "id": "fact-03",
+      "category": "factual",
+      "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
+      "answer": "The Arya Voyager credit card has an annual fee of ₹2,500. This fee can be waived if the cardholder’s total annual spend exceeds ₹3,00,000. [CC-002]",
+      "retrieved": [
+        "CC-002#4",
+        "CC-002#1",
+        "CC-002#2",
+        "CC-002#6"
+      ],
+      "latency_s": 0.53,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+        }
+      }
+    },
+    {
+      "id": "fact-04",
+      "category": "factual",
+      "question": "What is the finance charge on revolving credit card balances?",
+      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
+      "retrieved": [
+        "CC-002#2",
+        "CC-002#3",
+        "CC-002#4",
+        "CC-002#1"
+      ],
+      "latency_s": 0.3,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+        }
+      }
+    },
+    {
       "id": "fact-05",
       "category": "factual",
       "question": "What is the foreign currency markup on the Arya Signature card?",
@@ -167,7 +167,7 @@
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.403,
+      "latency_s": 0.444,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -193,14 +193,14 @@
       "id": "fact-06",
       "category": "factual",
       "question": "What is the minimum credit score required for a home loan?",
-      "answer": "The minimum credit score required for a home loan is 700 (CIBIL or equivalent). [HL-003]",
+      "answer": "The minimum credit score required for a home loan is 700. [HL-003]",
       "retrieved": [
         "HL-003#1",
         "HL-003#2",
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.345,
+      "latency_s": 0.485,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -214,7 +214,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -229,7 +229,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.3,
+      "latency_s": 0.403,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -243,7 +243,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -258,7 +258,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.541,
+      "latency_s": 0.79,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -287,7 +287,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.271,
+      "latency_s": 0.446,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -316,7 +316,7 @@
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.411,
+      "latency_s": 0.43,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -330,7 +330,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected."
         }
       }
     },
@@ -338,14 +338,14 @@
       "id": "fact-11",
       "category": "factual",
       "question": "When can I approach the RBI Ombudsman with a complaint?",
-      "answer": "You may approach the RBI Ombudsman if your complaint has not been resolved within 30 days of lodging it with Arya Bank, or if you are not satisfied with the bank’s response. This is outlined in the Level 3 grievance procedure. [DIS-005]",
+      "answer": "You may approach the RBI Ombudsman if your complaint has not been resolved within 30 days of lodging it with Arya Bank, or if you are not satisfied with the bank’s response. This is the Level 3 escalation step in the grievance redressal process. [DIS-005]",
       "retrieved": [
         "DIS-005#5",
         "DIS-005#3",
         "DIS-005#1",
         "DIS-005#2"
       ],
-      "latency_s": 0.407,
+      "latency_s": 0.374,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -359,7 +359,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected."
         }
       }
     },
@@ -374,7 +374,7 @@
         "KYC-004#4",
         "KYC-004#6"
       ],
-      "latency_s": 0.399,
+      "latency_s": 0.669,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -388,7 +388,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected."
         }
       }
     },
@@ -403,7 +403,7 @@
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.432,
+      "latency_s": 0.391,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -417,7 +417,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected."
         }
       }
     },
@@ -425,14 +425,14 @@
       "id": "reason-02",
       "category": "reasoning",
       "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank can fund up to **80 % of the property value** for a loan of ₹50 lakh. [HL-003]",
+      "answer": "The bank will fund up to 80% of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
       "retrieved": [
         "HL-003#2",
         "HL-003#4",
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.434,
+      "latency_s": 0.7,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -461,7 +461,7 @@
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.548,
+      "latency_s": 0.924,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -490,7 +490,7 @@
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.661,
+      "latency_s": 0.615,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -504,7 +504,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -512,14 +512,14 @@
       "id": "reason-05",
       "category": "reasoning",
       "question": "I have a credit score of 760. What home loan interest rate will I get, and does it change if I am a woman applicant?",
-      "answer": "With a credit score of 760, you qualify for an interest rate of 8.65% per annum. If you are a woman applicant, the rate is reduced by 0.05% to 8.60% per annum. [HL-003]",
+      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant (sole or primary co‑applicant), the rate is reduced by 0.05%, giving you 8.60% per annum. [HL-003]",
       "retrieved": [
         "HL-003#3",
         "HL-003#2",
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.517,
+      "latency_s": 0.431,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -533,7 +533,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -548,7 +548,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.353,
+      "latency_s": 0.643,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -571,7 +571,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.425,
+      "latency_s": 0.167,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -594,7 +594,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.602,
+      "latency_s": 0.363,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -617,7 +617,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.815,
+      "latency_s": 0.282,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -640,7 +640,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.436,
+      "latency_s": 1.722,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -654,7 +654,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
         }
       }
     },
@@ -669,7 +669,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.5,
+      "latency_s": 0.491,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -687,7 +687,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -702,7 +702,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 1.051,
+      "latency_s": 0.518,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -716,7 +716,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     }
