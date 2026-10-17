@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-17 00:01 UTC",
+  "run_at": "2026-10-17 23:34 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.422
+    "p50_latency_s": 0.44
   },
   "baseline_summary": null,
   "thresholds": {
@@ -51,7 +51,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.441,
+      "latency_s": 0.438,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -65,7 +65,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -80,7 +80,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.42,
+      "latency_s": 0.526,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -94,7 +94,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -102,14 +102,14 @@
       "id": "fact-03",
       "category": "factual",
       "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
-      "answer": "The annual fee for the Arya Voyager credit card is ₹2,500.  \nIt can be waived if the cardholder’s annual spend exceeds ₹3,00,000. [CC-002]",
+      "answer": "The Arya Voyager credit card has an annual fee of ₹2,500 [CC-002].  \nThe fee can be waived if the cardholder’s annual spend exceeds ₹3,00,000 [CC-002].",
       "retrieved": [
         "CC-002#4",
         "CC-002#1",
         "CC-002#2",
         "CC-002#6"
       ],
-      "latency_s": 0.431,
+      "latency_s": 0.618,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -123,7 +123,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -131,14 +131,14 @@
       "id": "fact-04",
       "category": "factual",
       "question": "What is the finance charge on revolving credit card balances?",
-      "answer": "The finance charge on revolving credit card balances is 3.6 % per month, which equals 43.2 % per annum. [CC-002]",
+      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
       "retrieved": [
         "CC-002#2",
         "CC-002#3",
         "CC-002#4",
         "CC-002#1"
       ],
-      "latency_s": 0.448,
+      "latency_s": 0.371,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -152,7 +152,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -160,14 +160,14 @@
       "id": "fact-05",
       "category": "factual",
       "question": "What is the foreign currency markup on the Arya Signature card?",
-      "answer": "The foreign currency transaction markup on the Arya Signature card is 2%【CC-002】.",
+      "answer": "The foreign currency transaction markup for the Arya Signature card is 2%【CC-002】.",
       "retrieved": [
         "CC-002#4",
         "CC-002#5",
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.448,
+      "latency_s": 0.496,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -185,7 +185,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -200,7 +200,7 @@
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.353,
+      "latency_s": 0.509,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -214,7 +214,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -229,7 +229,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.335,
+      "latency_s": 0.426,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -243,7 +243,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -258,7 +258,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.425,
+      "latency_s": 0.562,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -272,7 +272,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -287,7 +287,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.363,
+      "latency_s": 0.325,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -301,7 +301,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -316,7 +316,7 @@
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.443,
+      "latency_s": 0.511,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -330,7 +330,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -345,7 +345,7 @@
         "DIS-005#1",
         "DIS-005#2"
       ],
-      "latency_s": 0.381,
+      "latency_s": 0.424,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -359,7 +359,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -374,7 +374,7 @@
         "KYC-004#4",
         "KYC-004#6"
       ],
-      "latency_s": 0.451,
+      "latency_s": 0.551,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -388,7 +388,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -396,14 +396,14 @@
       "id": "reason-01",
       "category": "reasoning",
       "question": "My credit card total amount due is ₹12,000 and I missed the minimum payment. What late fee will I be charged?",
-      "answer": "You will be charged a late payment fee of ₹950. [CC-002]",
+      "answer": "The late payment charge for a total amount due of ₹12,000 is ₹950. [CC-002]",
       "retrieved": [
         "CC-002#3",
         "CC-002#2",
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.411,
+      "latency_s": 0.437,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -417,7 +417,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -425,14 +425,14 @@
       "id": "reason-02",
       "category": "reasoning",
       "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank will fund up to 80 % of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
+      "answer": "The bank will fund up to 80% of the property value for a loan of ₹50 lakh. [HL-003]",
       "retrieved": [
         "HL-003#2",
         "HL-003#4",
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.5,
+      "latency_s": 0.418,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -446,7 +446,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -461,7 +461,7 @@
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.586,
+      "latency_s": 0.442,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -475,7 +475,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
         }
       }
     },
@@ -490,7 +490,7 @@
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.577,
+      "latency_s": 0.964,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -519,7 +519,7 @@
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.395,
+      "latency_s": 0.675,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -548,7 +548,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.361,
+      "latency_s": 0.539,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -571,7 +571,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.36,
+      "latency_s": 0.336,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -594,7 +594,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.743,
+      "latency_s": 0.288,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -617,7 +617,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.269,
+      "latency_s": 0.362,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -640,7 +640,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.398,
+      "latency_s": 0.296,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -669,7 +669,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.338,
+      "latency_s": 0.438,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -702,7 +702,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 1.036,
+      "latency_s": 0.842,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -716,7 +716,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     }
