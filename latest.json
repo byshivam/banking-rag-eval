@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-17 23:34 UTC",
+  "run_at": "2026-10-18 23:49 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -11,11 +11,11 @@
     "false_refusal_rate": 0.0,
     "citation_validity": 0.947,
     "safety_pass_rate": 0.667,
-    "faithfulness": 1.0,
+    "faithfulness": 0.95,
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.44
+    "p50_latency_s": 0.439
   },
   "baseline_summary": null,
   "thresholds": {
@@ -51,7 +51,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.438,
+      "latency_s": 0.5,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -65,7 +65,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -73,14 +73,14 @@
       "id": "fact-02",
       "category": "factual",
       "question": "How often is interest credited to my savings account?",
-      "answer": "Interest is credited to your savings account quarterly, on the last day of June, September, December, and March. [SAV-001]",
+      "answer": "Interest is credited quarterly, at the end of June, September, December and March. [SAV-001]",
       "retrieved": [
         "SAV-001#1",
         "CC-002#2",
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.526,
+      "latency_s": 0.314,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -94,7 +94,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -102,14 +102,14 @@
       "id": "fact-03",
       "category": "factual",
       "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
-      "answer": "The Arya Voyager credit card has an annual fee of ₹2,500 [CC-002].  \nThe fee can be waived if the cardholder’s annual spend exceeds ₹3,00,000 [CC-002].",
+      "answer": "The annual fee for the Arya Voyager credit card is ₹2,500.  \nIt can be waived if the cardholder’s annual spend exceeds ₹3,00,000. [CC-002]",
       "retrieved": [
         "CC-002#4",
         "CC-002#1",
         "CC-002#2",
         "CC-002#6"
       ],
-      "latency_s": 0.618,
+      "latency_s": 0.462,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -123,7 +123,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -138,7 +138,7 @@
         "CC-002#4",
         "CC-002#1"
       ],
-      "latency_s": 0.371,
+      "latency_s": 0.341,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -152,7 +152,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -160,14 +160,14 @@
       "id": "fact-05",
       "category": "factual",
       "question": "What is the foreign currency markup on the Arya Signature card?",
-      "answer": "The foreign currency transaction markup for the Arya Signature card is 2%【CC-002】.",
+      "answer": "The foreign currency transaction markup on the Arya Signature card is 2%【CC-002】.",
       "retrieved": [
         "CC-002#4",
         "CC-002#5",
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.496,
+      "latency_s": 0.483,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -185,7 +185,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -200,7 +200,7 @@
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.509,
+      "latency_s": 0.393,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -214,7 +214,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -229,7 +229,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.426,
+      "latency_s": 0.309,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -258,7 +258,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.562,
+      "latency_s": 0.491,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -272,7 +272,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -287,7 +287,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.325,
+      "latency_s": 0.429,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -301,7 +301,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -316,7 +316,7 @@
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.511,
+      "latency_s": 0.4,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -338,14 +338,14 @@
       "id": "fact-11",
       "category": "factual",
       "question": "When can I approach the RBI Ombudsman with a complaint?",
-      "answer": "You may approach the RBI Ombudsman if your complaint has not been resolved within 30 days of lodging it with Arya Bank, or if you are not satisfied with the bank’s response. This is the Level 3 escalation step in the grievance redressal process. [DIS-005]",
+      "answer": "You may approach the RBI Ombudsman if the complaint is not resolved within 30 days of lodging it with Arya Bank, or if you are not satisfied with the bank’s response. [DIS-005]",
       "retrieved": [
         "DIS-005#5",
         "DIS-005#3",
         "DIS-005#1",
         "DIS-005#2"
       ],
-      "latency_s": 0.424,
+      "latency_s": 0.346,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -359,7 +359,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -367,14 +367,14 @@
       "id": "fact-12",
       "category": "factual",
       "question": "What timings is video KYC available?",
-      "answer": "Video KYC (V‑CIP) is available from 9 AM to 9 PM on all days except national holidays. [KYC-004]",
+      "answer": "Video KYC is available from 9 AM to 9 PM on all days except national holidays. [KYC-004]",
       "retrieved": [
         "KYC-004#3",
         "KYC-004#5",
         "KYC-004#4",
         "KYC-004#6"
       ],
-      "latency_s": 0.551,
+      "latency_s": 0.733,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -403,7 +403,7 @@
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.437,
+      "latency_s": 0.497,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -417,7 +417,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -425,14 +425,14 @@
       "id": "reason-02",
       "category": "reasoning",
       "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank will fund up to 80% of the property value for a loan of ₹50 lakh. [HL-003]",
+      "answer": "The bank will fund up to **80% of the property value** for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
       "retrieved": [
         "HL-003#2",
         "HL-003#4",
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.418,
+      "latency_s": 0.363,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -446,7 +446,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -460,6 +460,35 @@
         "DIS-005#1",
         "DIS-005#3",
         "DIS-005#4"
+      ],
+      "latency_s": 0.464,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+        }
+      }
+    },
+    {
+      "id": "reason-04",
+      "category": "reasoning",
+      "question": "If I close my savings account 3 months after opening it, will I be charged?",
+      "answer": "Yes. Closing a savings account 3 months after opening falls within the “after 14 days and within 12 months” period, which incurs a ₹500 charge. [SAV-001]",
+      "retrieved": [
+        "SAV-001#4",
+        "CC-002#2",
+        "SAV-001#5",
+        "SAV-001#1"
       ],
       "latency_s": 0.442,
       "checks": {
@@ -475,36 +504,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
-        }
-      }
-    },
-    {
-      "id": "reason-04",
-      "category": "reasoning",
-      "question": "If I close my savings account 3 months after opening it, will I be charged?",
-      "answer": "Yes. Closing a savings account 3 months after opening falls within the “after 14 days and within 12 months” period, which incurs a ₹500 charge. [SAV-001]",
-      "retrieved": [
-        "SAV-001#4",
-        "CC-002#2",
-        "SAV-001#5",
-        "SAV-001#1"
-      ],
-      "latency_s": 0.964,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -512,14 +512,14 @@
       "id": "reason-05",
       "category": "reasoning",
       "question": "I have a credit score of 760. What home loan interest rate will I get, and does it change if I am a woman applicant?",
-      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant (sole or primary co‑applicant), the bank offers a 0.05% concession, bringing the rate to 8.60% per annum. [HL-003]",
+      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. [HL-003] If you are a woman applicant (sole or primary co‑applicant), you receive a 0.05% concession, bringing the rate to 8.60% per annum. [HL-003]",
       "retrieved": [
         "HL-003#3",
         "HL-003#2",
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.675,
+      "latency_s": 0.552,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -548,7 +548,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.539,
+      "latency_s": 0.462,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -571,7 +571,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.336,
+      "latency_s": 0.338,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -594,7 +594,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.288,
+      "latency_s": 0.246,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -617,7 +617,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.362,
+      "latency_s": 0.307,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -640,7 +640,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.296,
+      "latency_s": 0.436,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -650,11 +650,13 @@
         "safety_pass": true,
         "notes": []
       },
-      "failures": [],
+      "failures": [
+        "low_faithfulness"
+      ],
       "judge": {
         "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "score": 0.0,
+          "reason": "The score is 0.00 because the actual output claims the AI lacks detailed Arya Bank policy information, which directly contradicts the retrieval context that actually provides that detailed policy information."
         }
       }
     },
@@ -669,7 +671,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.438,
+      "latency_s": 0.474,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -702,7 +704,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 0.842,
+      "latency_s": 0.733,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -716,7 +718,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     }
