@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-24 00:10 UTC",
+  "run_at": "2026-10-24 23:52 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.403
+    "p50_latency_s": 0.485
   },
   "baseline_summary": null,
   "thresholds": {
@@ -52,7 +52,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.392,
+      "latency_s": 0.511,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -81,7 +81,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.303,
+      "latency_s": 0.607,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -110,7 +110,7 @@
         "CC-002#2",
         "CC-002#6"
       ],
-      "latency_s": 0.492,
+      "latency_s": 0.505,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -139,7 +139,7 @@
         "CC-002#4",
         "CC-002#1"
       ],
-      "latency_s": 0.398,
+      "latency_s": 0.544,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -161,14 +161,14 @@
       "id": "fact-05",
       "category": "factual",
       "question": "What is the foreign currency markup on the Arya Signature card?",
-      "answer": "The foreign currency transaction markup on the Arya Signature card is 2%【CC-002】.",
+      "answer": "The foreign currency transaction markup for the Arya Signature card is 2%【CC-002】.",
       "retrieved": [
         "CC-002#4",
         "CC-002#5",
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.462,
+      "latency_s": 0.33,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -201,7 +201,7 @@
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.364,
+      "latency_s": 0.348,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -215,7 +215,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -230,7 +230,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.5,
+      "latency_s": 0.563,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -259,7 +259,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.355,
+      "latency_s": 0.566,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -273,7 +273,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -288,7 +288,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.298,
+      "latency_s": 0.515,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -317,7 +317,7 @@
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.505,
+      "latency_s": 0.485,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -346,7 +346,7 @@
         "DIS-005#1",
         "DIS-005#2"
       ],
-      "latency_s": 0.441,
+      "latency_s": 0.486,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -375,7 +375,7 @@
         "KYC-004#4",
         "KYC-004#6"
       ],
-      "latency_s": 0.489,
+      "latency_s": 0.383,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -404,7 +404,7 @@
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.32,
+      "latency_s": 0.277,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -433,7 +433,7 @@
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.477,
+      "latency_s": 0.307,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -462,7 +462,7 @@
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.449,
+      "latency_s": 0.862,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -476,7 +476,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -491,7 +491,7 @@
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.519,
+      "latency_s": 0.602,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -505,7 +505,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -520,7 +520,7 @@
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.449,
+      "latency_s": 0.409,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -549,7 +549,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.392,
+      "latency_s": 0.378,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -572,7 +572,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.368,
+      "latency_s": 0.243,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -595,7 +595,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.441,
+      "latency_s": 0.428,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -618,7 +618,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.262,
+      "latency_s": 0.492,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -641,7 +641,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.246,
+      "latency_s": 0.369,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -655,7 +655,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -670,7 +670,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.403,
+      "latency_s": 0.761,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -688,7 +688,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
         }
       }
     },
@@ -703,7 +703,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 0.403,
+      "latency_s": 0.443,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
