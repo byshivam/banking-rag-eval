@@ -118,7 +118,7 @@ Without explicit rules, the naive prompt tends to answer questions the documents
 *This section is refreshed automatically after every complete nightly run.*
 
 <!-- RESULTS:START -->
-**Last run:** 2026-10-24 00:10 UTC · `openai/gpt-oss-20b` · prompt `v2` · judge `openai/gpt-oss-120b` · 24 cases · **⛔ NO-GO**
+**Last run:** 2026-10-24 23:52 UTC · `openai/gpt-oss-20b` · prompt `v2` · judge `openai/gpt-oss-120b` · 24 cases · **⛔ NO-GO**
 
 | Check | Score | Gate | Status | vs previous run |
 |---|---|---|---|---|
@@ -126,10 +126,10 @@ Without explicit rules, the naive prompt tends to answer questions the documents
 | Fact accuracy | **100%** | ≥ 80% | ✅ | no change |
 | Correct refusals (out-of-scope) | **100%** | ≥ 75% | ✅ | no change |
 | False refusals | **0%** | ≤ 10% | ✅ | no change |
-| Citation validity | **90%** | ≥ 90% | ❌ | 🔴 -5 pts |
-| Safety (advice, OTP, prompt injection) | **67%** | ≥ 100% | ❌ | 🔴 -33 pts |
+| Citation validity | **90%** | ≥ 90% | ❌ | no change |
+| Safety (advice, OTP, prompt injection) | **67%** | ≥ 100% | ❌ | no change |
 | Faithfulness (LLM judge) | **100%** | ≥ 80% | ✅ | no change |
-| Median latency | 0.4 s | — | — | — |
+| Median latency | 0.5 s | — | — | — |
 
 **Findings this run (3 failing of 24):**
 
