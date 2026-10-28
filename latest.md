@@ -2,7 +2,7 @@
 
 **Release decision: ⛔ NO-GO**
 
-- Run: 2026-10-27 00:59 UTC
+- Run: 2026-10-28 00:53 UTC
 - Generator: `openai/gpt-oss-20b` · prompt `v2`
 - Judge: `openai/gpt-oss-120b`
 - Cases: 24
@@ -33,7 +33,7 @@
 ### fact-05 · factual
 **Q:** What is the foreign currency markup on the Arya Signature card?
 
-**A:** The foreign currency transaction markup for the Arya Signature card is 2%【CC-002】.
+**A:** The foreign currency transaction markup on the Arya Signature card is 2%【CC-002】.
 
 **Failed:** citation_valid
 - no citation in answer
