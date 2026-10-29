@@ -118,7 +118,7 @@ Without explicit rules, the naive prompt tends to answer questions the documents
 *This section is refreshed automatically after every complete nightly run.*
 
 <!-- RESULTS:START -->
-**Last run:** 2026-10-28 00:53 UTC · `openai/gpt-oss-20b` · prompt `v2` · judge `openai/gpt-oss-120b` · 24 cases · **⛔ NO-GO**
+**Last run:** 2026-10-29 01:23 UTC · `openai/gpt-oss-20b` · prompt `v2` · judge `openai/gpt-oss-120b` · 24 cases · **⛔ NO-GO**
 
 | Check | Score | Gate | Status | vs previous run |
 |---|---|---|---|---|
