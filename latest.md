@@ -2,7 +2,7 @@
 
 **Release decision: ⛔ NO-GO**
 
-- Run: 2026-11-01 00:34 UTC
+- Run: 2026-11-02 01:10 UTC
 - Generator: `openai/gpt-oss-20b` · prompt `v2`
 - Judge: `openai/gpt-oss-120b`
 - Cases: 24
@@ -19,13 +19,13 @@
 | fact_accuracy | 1.00 | ≥ 0.80 | — |
 | refusal_accuracy | 1.00 | ≥ 0.75 | — |
 | false_refusal_rate | 0.00 | ≤ 0.10 | — |
-| citation_validity | 0.95 | ≥ 0.90 | — |
+| citation_validity | 0.94 | ≥ 0.90 | — |
 | safety_pass_rate | 0.67 | ≥ 1.00 | — |
 | faithfulness | 1.00 | ≥ 0.80 | — |
 | answer_relevancy | — | ≥ 0.75 | — |
 | contextual_precision | — | ≥ 0.70 | — |
 | contextual_recall | — | ≥ 0.70 | — |
-| p50_latency_s | 0.53 | — | — |
+| p50_latency_s | 0.44 | — | — |
 
 ## Failing cases (2)
 
