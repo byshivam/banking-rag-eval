@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-08 01:03 UTC",
+  "run_at": "2026-11-09 01:22 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.504
+    "p50_latency_s": 0.484
   },
   "baseline_summary": null,
   "thresholds": {
@@ -52,7 +52,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.693,
+      "latency_s": 0.531,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -66,7 +66,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -74,14 +74,14 @@
       "id": "fact-02",
       "category": "factual",
       "question": "How often is interest credited to my savings account?",
-      "answer": "Interest is credited to your savings account quarterly, on the last day of June, September, December, and March. [SAV-001]",
+      "answer": "Interest is credited to your savings account quarterly, at the end of June, September, December and March. [SAV-001]",
       "retrieved": [
         "SAV-001#1",
         "CC-002#2",
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.455,
+      "latency_s": 0.486,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -95,7 +95,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -110,7 +110,7 @@
         "CC-002#2",
         "CC-002#6"
       ],
-      "latency_s": 0.504,
+      "latency_s": 0.54,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -124,7 +124,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -132,14 +132,14 @@
       "id": "fact-04",
       "category": "factual",
       "question": "What is the finance charge on revolving credit card balances?",
-      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
+      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equals 43.2 % per annum. [CC-002]",
       "retrieved": [
         "CC-002#2",
         "CC-002#3",
         "CC-002#4",
         "CC-002#1"
       ],
-      "latency_s": 0.325,
+      "latency_s": 0.437,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -153,7 +153,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -168,7 +168,7 @@
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.616,
+      "latency_s": 0.512,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -186,7 +186,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -201,7 +201,7 @@
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.385,
+      "latency_s": 0.369,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -215,7 +215,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
         }
       }
     },
@@ -230,7 +230,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.358,
+      "latency_s": 0.321,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -244,7 +244,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -252,14 +252,14 @@
       "id": "fact-08",
       "category": "factual",
       "question": "Which documents can I use as proof of identity and address for KYC?",
-      "answer": "You can use any of the following as proof of identity and address: Aadhaar card, Passport, Driving licence, Voter ID card, or an NREGA job card signed by a State Government officer. A PAN card (or Form 60 if you do not have a PAN) is mandatory in addition to one of these documents. [KYC-004]",
+      "answer": "Proof of identity and address for KYC can be provided using any of the following documents: Aadhaar card (with masked number where required), passport, driving licence, voter ID card, or an NREGA job card signed by a State Government officer. In addition, a PAN card (or Form 60 if no PAN) is mandatory. [KYC-004]",
       "retrieved": [
         "KYC-004#2",
         "KYC-004#6",
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.657,
+      "latency_s": 0.607,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -273,7 +273,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -288,7 +288,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.504,
+      "latency_s": 0.423,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -302,7 +302,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -317,7 +317,7 @@
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.399,
+      "latency_s": 0.468,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -331,7 +331,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -345,35 +345,6 @@
         "DIS-005#3",
         "DIS-005#1",
         "DIS-005#2"
-      ],
-      "latency_s": 0.429,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
-        }
-      }
-    },
-    {
-      "id": "fact-12",
-      "category": "factual",
-      "question": "What timings is video KYC available?",
-      "answer": "Video KYC (V‑CIP) is available from 9 AM to 9 PM on all days except national holidays. [KYC-004]",
-      "retrieved": [
-        "KYC-004#3",
-        "KYC-004#5",
-        "KYC-004#4",
-        "KYC-004#6"
       ],
       "latency_s": 0.483,
       "checks": {
@@ -389,7 +360,36 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
+        }
+      }
+    },
+    {
+      "id": "fact-12",
+      "category": "factual",
+      "question": "What timings is video KYC available?",
+      "answer": "Video KYC (V‑CIP) is available from 9 AM to 9 PM on all days except national holidays. [KYC-004]",
+      "retrieved": [
+        "KYC-004#3",
+        "KYC-004#5",
+        "KYC-004#4",
+        "KYC-004#6"
+      ],
+      "latency_s": 0.45,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
         }
       }
     },
@@ -404,7 +404,7 @@
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.407,
+      "latency_s": 0.429,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -418,7 +418,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -426,14 +426,14 @@
       "id": "reason-02",
       "category": "reasoning",
       "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank can fund up to **80 % of the property value** for a loan of ₹50 lakh. [HL-003]",
+      "answer": "The bank will fund up to 80 % of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
       "retrieved": [
         "HL-003#2",
         "HL-003#4",
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.545,
+      "latency_s": 0.388,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -447,7 +447,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -462,7 +462,7 @@
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.764,
+      "latency_s": 0.505,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -476,7 +476,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -484,14 +484,14 @@
       "id": "reason-04",
       "category": "reasoning",
       "question": "If I close my savings account 3 months after opening it, will I be charged?",
-      "answer": "Yes. Closing a savings account 3 months after opening incurs a ₹500 charge, as it falls between 14 days and 12 months from opening. [SAV-001]",
+      "answer": "Yes. Closing a savings account after 14 days but within 12 months of opening incurs a ₹500 charge. [SAV-001]",
       "retrieved": [
         "SAV-001#4",
         "CC-002#2",
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.548,
+      "latency_s": 0.712,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -505,7 +505,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -513,14 +513,14 @@
       "id": "reason-05",
       "category": "reasoning",
       "question": "I have a credit score of 760. What home loan interest rate will I get, and does it change if I am a woman applicant?",
-      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant, you receive a 0.05% concession, bringing the rate to 8.60% per annum. [HL-003]",
+      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant (sole or primary co‑applicant), you receive a 0.05% concession, bringing the rate to 8.60% per annum. [HL-003]",
       "retrieved": [
         "HL-003#3",
         "HL-003#2",
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.503,
+      "latency_s": 0.513,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -534,7 +534,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context."
         }
       }
     },
@@ -549,7 +549,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.519,
+      "latency_s": 0.427,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -572,7 +572,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.443,
+      "latency_s": 0.32,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -595,7 +595,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 1.025,
+      "latency_s": 0.541,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -618,7 +618,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.427,
+      "latency_s": 0.401,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -641,7 +641,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.517,
+      "latency_s": 0.507,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -657,7 +657,7 @@
       "judge": {
         "faithfulness": {
           "score": 0.0,
-          "reason": "The score is 0.00 because the actual output claimed the AI lacks the Arya Bank policy details, directly contradicting the retrieval context which actually provides detailed Arya Bank policy information."
+          "reason": "The score is 0.00 because the actual output claims the AI lacks information in Arya Bank's policy documents, yet the retrieval context contains detailed policy information, directly contradicting that claim."
         }
       }
     },
@@ -672,7 +672,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.541,
+      "latency_s": 0.617,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -690,7 +690,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -705,7 +705,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 0.486,
+      "latency_s": 0.528,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -723,7 +723,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     }
