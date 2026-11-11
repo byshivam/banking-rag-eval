@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-10 03:57 UTC",
+  "run_at": "2026-11-11 01:37 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.417
+    "p50_latency_s": 0.476
   },
   "baseline_summary": null,
   "thresholds": {
@@ -52,7 +52,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.545,
+      "latency_s": 1.383,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -74,14 +74,14 @@
       "id": "fact-02",
       "category": "factual",
       "question": "How often is interest credited to my savings account?",
-      "answer": "Interest is calculated daily and credited to your savings account quarterly, on the last day of June, September, December and March. [SAV-001]",
+      "answer": "Interest is credited to your savings account quarterly, at the end of June, September, December and March. [SAV-001]",
       "retrieved": [
         "SAV-001#1",
         "CC-002#2",
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.333,
+      "latency_s": 0.473,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -95,7 +95,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -103,14 +103,14 @@
       "id": "fact-03",
       "category": "factual",
       "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
-      "answer": "The Arya Voyager credit card has an annual fee of ₹2,500.  \nThe fee can be waived if the cardholder’s annual spend exceeds ₹3,00,000. [CC-002]",
+      "answer": "The annual fee for the Arya Voyager credit card is ₹2,500 [CC-002].  \nIt can be waived if the cardholder’s annual spend exceeds ₹3,00,000 [CC-002].",
       "retrieved": [
         "CC-002#4",
         "CC-002#1",
         "CC-002#2",
         "CC-002#6"
       ],
-      "latency_s": 0.447,
+      "latency_s": 0.51,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -124,7 +124,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -132,14 +132,14 @@
       "id": "fact-04",
       "category": "factual",
       "question": "What is the finance charge on revolving credit card balances?",
-      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equals 43.2 % per annum. [CC-002]",
+      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
       "retrieved": [
         "CC-002#2",
         "CC-002#3",
         "CC-002#4",
         "CC-002#1"
       ],
-      "latency_s": 0.603,
+      "latency_s": 0.454,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -168,7 +168,7 @@
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.56,
+      "latency_s": 0.332,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -186,7 +186,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -201,7 +201,7 @@
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.363,
+      "latency_s": 0.422,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -215,7 +215,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -230,7 +230,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.39,
+      "latency_s": 0.394,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -244,7 +244,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -259,7 +259,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.473,
+      "latency_s": 0.581,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -273,7 +273,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -288,7 +288,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.293,
+      "latency_s": 0.435,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -310,14 +310,14 @@
       "id": "fact-10",
       "category": "factual",
       "question": "Within how many days will the bank give a shadow credit for an unauthorised transaction?",
-      "answer": "The bank will give a shadow credit within 10 working days of the complaint being reported. [DIS-005]",
+      "answer": "The bank will credit the disputed amount (shadow credit) within **10 working days** of the complaint being reported. [DIS-005]",
       "retrieved": [
         "DIS-005#3",
         "DIS-005#4",
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.335,
+      "latency_s": 0.477,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -331,7 +331,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -345,6 +345,93 @@
         "DIS-005#3",
         "DIS-005#1",
         "DIS-005#2"
+      ],
+      "latency_s": 0.544,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+        }
+      }
+    },
+    {
+      "id": "fact-12",
+      "category": "factual",
+      "question": "What timings is video KYC available?",
+      "answer": "Video KYC (V‑CIP) is available from 9 AM to 9 PM on all days except national holidays. [KYC-004]",
+      "retrieved": [
+        "KYC-004#3",
+        "KYC-004#5",
+        "KYC-004#4",
+        "KYC-004#6"
+      ],
+      "latency_s": 0.503,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+        }
+      }
+    },
+    {
+      "id": "reason-01",
+      "category": "reasoning",
+      "question": "My credit card total amount due is ₹12,000 and I missed the minimum payment. What late fee will I be charged?",
+      "answer": "The late payment charge for a total amount due of ₹12,000 is ₹950. [CC-002]",
+      "retrieved": [
+        "CC-002#3",
+        "CC-002#2",
+        "CC-002#4",
+        "HL-003#4"
+      ],
+      "latency_s": 0.431,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+        }
+      }
+    },
+    {
+      "id": "reason-02",
+      "category": "reasoning",
+      "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
+      "answer": "The bank will fund up to **80% of the property value** for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
+      "retrieved": [
+        "HL-003#2",
+        "HL-003#4",
+        "HL-003#3",
+        "HL-003#5"
       ],
       "latency_s": 0.386,
       "checks": {
@@ -360,94 +447,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
-        }
-      }
-    },
-    {
-      "id": "fact-12",
-      "category": "factual",
-      "question": "What timings is video KYC available?",
-      "answer": "Video KYC (V‑CIP) is available from 9 AM to 9 PM on all days except national holidays. [KYC-004]",
-      "retrieved": [
-        "KYC-004#3",
-        "KYC-004#5",
-        "KYC-004#4",
-        "KYC-004#6"
-      ],
-      "latency_s": 0.467,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
-        }
-      }
-    },
-    {
-      "id": "reason-01",
-      "category": "reasoning",
-      "question": "My credit card total amount due is ₹12,000 and I missed the minimum payment. What late fee will I be charged?",
-      "answer": "The late payment charge for a total amount due of ₹12,000 is ₹950. [CC-002]",
-      "retrieved": [
-        "CC-002#3",
-        "CC-002#2",
-        "CC-002#4",
-        "HL-003#4"
-      ],
-      "latency_s": 0.441,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
-        }
-      }
-    },
-    {
-      "id": "reason-02",
-      "category": "reasoning",
-      "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank will fund up to 80 % of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
-      "retrieved": [
-        "HL-003#2",
-        "HL-003#4",
-        "HL-003#3",
-        "HL-003#5"
-      ],
-      "latency_s": 0.403,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -455,14 +455,14 @@
       "id": "reason-03",
       "category": "reasoning",
       "question": "I reported a fraudulent transaction on my savings account 5 working days after the bank's alert. What is my maximum liability?",
-      "answer": "Your maximum liability is the lower of the transaction value or ₹10,000, as you reported the fraud 5 working days after the bank’s alert. [DIS-005]",
+      "answer": "Your maximum liability is the lower of the transaction value or ₹10,000 for a savings account when reported 4‑7 working days after the bank’s alert. [DIS-005]",
       "retrieved": [
         "DIS-005#2",
         "DIS-005#1",
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.489,
+      "latency_s": 0.475,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -476,7 +476,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -491,7 +491,7 @@
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.513,
+      "latency_s": 0.576,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -505,7 +505,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -520,7 +520,7 @@
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.456,
+      "latency_s": 0.537,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -534,7 +534,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -549,7 +549,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.375,
+      "latency_s": 0.379,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -572,7 +572,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.263,
+      "latency_s": 0.438,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -595,7 +595,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.278,
+      "latency_s": 0.483,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -618,7 +618,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.368,
+      "latency_s": 0.399,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -641,7 +641,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.298,
+      "latency_s": 0.688,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -655,7 +655,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating a perfectly faithful output!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -670,7 +670,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.431,
+      "latency_s": 0.526,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -703,7 +703,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 0.484,
+      "latency_s": 0.555,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
