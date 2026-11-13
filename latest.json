@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-12 02:40 UTC",
+  "run_at": "2026-11-13 02:16 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.492
+    "p50_latency_s": 0.426
   },
   "baseline_summary": null,
   "thresholds": {
@@ -52,7 +52,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.584,
+      "latency_s": 0.594,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -66,7 +66,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -81,7 +81,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.489,
+      "latency_s": 0.456,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -95,7 +95,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -110,7 +110,7 @@
         "CC-002#2",
         "CC-002#6"
       ],
-      "latency_s": 0.635,
+      "latency_s": 0.569,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -124,7 +124,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -139,7 +139,7 @@
         "CC-002#4",
         "CC-002#1"
       ],
-      "latency_s": 0.532,
+      "latency_s": 0.328,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -153,7 +153,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -168,7 +168,7 @@
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.484,
+      "latency_s": 0.401,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -186,7 +186,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -201,7 +201,7 @@
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.301,
+      "latency_s": 0.468,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -215,7 +215,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -230,7 +230,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.328,
+      "latency_s": 0.314,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -244,7 +244,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -259,7 +259,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.414,
+      "latency_s": 0.561,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -273,7 +273,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -288,7 +288,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.348,
+      "latency_s": 0.502,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -302,7 +302,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -310,14 +310,14 @@
       "id": "fact-10",
       "category": "factual",
       "question": "Within how many days will the bank give a shadow credit for an unauthorised transaction?",
-      "answer": "The bank will give a shadow credit within 10 working days of the complaint being reported. [DIS-005]",
+      "answer": "The bank will credit the disputed amount (shadow credit) within **10 working days** of the complaint being reported. [DIS-005]",
       "retrieved": [
         "DIS-005#3",
         "DIS-005#4",
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.425,
+      "latency_s": 0.444,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -331,7 +331,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -346,7 +346,7 @@
         "DIS-005#1",
         "DIS-005#2"
       ],
-      "latency_s": 0.495,
+      "latency_s": 0.403,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -360,7 +360,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -375,7 +375,7 @@
         "KYC-004#4",
         "KYC-004#6"
       ],
-      "latency_s": 0.379,
+      "latency_s": 0.367,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -389,7 +389,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -404,7 +404,7 @@
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.514,
+      "latency_s": 0.517,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -426,14 +426,14 @@
       "id": "reason-02",
       "category": "reasoning",
       "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank will fund up to 80% of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
+      "answer": "The bank will fund up to 80 % of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
       "retrieved": [
         "HL-003#2",
         "HL-003#4",
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.652,
+      "latency_s": 0.409,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -447,7 +447,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
         }
       }
     },
@@ -462,7 +462,7 @@
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.788,
+      "latency_s": 0.537,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -476,7 +476,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -484,14 +484,14 @@
       "id": "reason-04",
       "category": "reasoning",
       "question": "If I close my savings account 3 months after opening it, will I be charged?",
-      "answer": "Yes. Closing a savings account 3 months after opening falls into the “after 14 days and within 12 months” category, which incurs a ₹500 charge. [SAV-001]",
+      "answer": "Yes. Closing a savings account 3 months after opening falls within the period of 14 days to 12 months, so a ₹500 charge applies. [SAV-001]",
       "retrieved": [
         "SAV-001#4",
         "CC-002#2",
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.721,
+      "latency_s": 0.414,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -505,7 +505,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     },
@@ -513,14 +513,14 @@
       "id": "reason-05",
       "category": "reasoning",
       "question": "I have a credit score of 760. What home loan interest rate will I get, and does it change if I am a woman applicant?",
-      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. [HL-003] If you are a woman applicant (sole or primary co‑applicant), you receive a 0.05% concession, bringing the rate to 8.60% per annum. [HL-003]",
+      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant, a concession of 0.05% applies, bringing the rate to 8.60% per annum. [HL-003]",
       "retrieved": [
         "HL-003#3",
         "HL-003#2",
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.445,
+      "latency_s": 0.352,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -534,7 +534,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -549,7 +549,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.625,
+      "latency_s": 0.276,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -572,7 +572,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.526,
+      "latency_s": 0.384,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -595,7 +595,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.328,
+      "latency_s": 0.438,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -618,7 +618,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.576,
+      "latency_s": 0.361,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -641,7 +641,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.496,
+      "latency_s": 0.209,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -655,7 +655,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -670,7 +670,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.359,
+      "latency_s": 0.829,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -688,7 +688,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -703,7 +703,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 0.468,
+      "latency_s": 0.529,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -721,7 +721,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
         }
       }
     }
