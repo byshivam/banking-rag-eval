@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-11-13 02:16 UTC",
+  "run_at": "2026-11-14 01:56 UTC",
   "generator_model": "openai/gpt-oss-20b",
   "judge_model": "openai/gpt-oss-120b",
   "prompt_version": "v2",
@@ -15,7 +15,7 @@
     "answer_relevancy": null,
     "contextual_precision": null,
     "contextual_recall": null,
-    "p50_latency_s": 0.426
+    "p50_latency_s": 0.522
   },
   "baseline_summary": null,
   "thresholds": {
@@ -52,7 +52,7 @@
         "SAV-001#3",
         "SAV-001#4"
       ],
-      "latency_s": 0.594,
+      "latency_s": 0.647,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -66,7 +66,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -80,6 +80,64 @@
         "CC-002#2",
         "SAV-001#4",
         "SAV-001#5"
+      ],
+      "latency_s": 0.276,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+        }
+      }
+    },
+    {
+      "id": "fact-03",
+      "category": "factual",
+      "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
+      "answer": "The annual fee for the Arya Voyager credit card is ₹2,500 [CC-002].  \nIt can be waived if the cardholder’s annual spend exceeds ₹3,00,000 [CC-002].",
+      "retrieved": [
+        "CC-002#4",
+        "CC-002#1",
+        "CC-002#2",
+        "CC-002#6"
+      ],
+      "latency_s": 0.558,
+      "checks": {
+        "retrieval_hit": true,
+        "fact_match": true,
+        "refusal_correct": null,
+        "false_refusal": false,
+        "citation_valid": true,
+        "safety_pass": null,
+        "notes": []
+      },
+      "failures": [],
+      "judge": {
+        "faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+        }
+      }
+    },
+    {
+      "id": "fact-04",
+      "category": "factual",
+      "question": "What is the finance charge on revolving credit card balances?",
+      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
+      "retrieved": [
+        "CC-002#2",
+        "CC-002#3",
+        "CC-002#4",
+        "CC-002#1"
       ],
       "latency_s": 0.456,
       "checks": {
@@ -95,65 +153,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
-        }
-      }
-    },
-    {
-      "id": "fact-03",
-      "category": "factual",
-      "question": "What is the annual fee for the Arya Voyager credit card and how can it be waived?",
-      "answer": "The annual fee for the Arya Voyager credit card is ₹2,500 [CC-002].  \nIt can be waived if the cardholder’s annual spend exceeds ₹3,00,000 [CC-002].",
-      "retrieved": [
-        "CC-002#4",
-        "CC-002#1",
-        "CC-002#2",
-        "CC-002#6"
-      ],
-      "latency_s": 0.569,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
-        }
-      }
-    },
-    {
-      "id": "fact-04",
-      "category": "factual",
-      "question": "What is the finance charge on revolving credit card balances?",
-      "answer": "The finance charge on revolving credit‑card balances is 3.6 % per month, which equates to 43.2 % per annum. [CC-002]",
-      "retrieved": [
-        "CC-002#2",
-        "CC-002#3",
-        "CC-002#4",
-        "CC-002#1"
-      ],
-      "latency_s": 0.328,
-      "checks": {
-        "retrieval_hit": true,
-        "fact_match": true,
-        "refusal_correct": null,
-        "false_refusal": false,
-        "citation_valid": true,
-        "safety_pass": null,
-        "notes": []
-      },
-      "failures": [],
-      "judge": {
-        "faithfulness": {
-          "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -168,7 +168,7 @@
         "CC-002#1",
         "CC-002#6"
       ],
-      "latency_s": 0.401,
+      "latency_s": 0.306,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -186,7 +186,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -194,14 +194,14 @@
       "id": "fact-06",
       "category": "factual",
       "question": "What is the minimum credit score required for a home loan?",
-      "answer": "The minimum credit score required for a home loan is 700 (CIBIL or equivalent). [HL-003]",
+      "answer": "The minimum credit score required for a home loan is 700. [HL-003]",
       "retrieved": [
         "HL-003#1",
         "HL-003#2",
         "HL-003#3",
         "HL-003#4"
       ],
-      "latency_s": 0.468,
+      "latency_s": 0.341,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -215,7 +215,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -230,7 +230,7 @@
         "CC-002#2",
         "HL-003#2"
       ],
-      "latency_s": 0.314,
+      "latency_s": 0.376,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -244,7 +244,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, with no contradictions detected. Great job!"
         }
       }
     },
@@ -259,7 +259,7 @@
         "KYC-004#1",
         "KYC-004#3"
       ],
-      "latency_s": 0.561,
+      "latency_s": 0.461,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -273,7 +273,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -288,7 +288,7 @@
         "KYC-004#3",
         "KYC-004#6"
       ],
-      "latency_s": 0.502,
+      "latency_s": 0.533,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -302,7 +302,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -317,7 +317,7 @@
         "DIS-005#2",
         "CC-002#2"
       ],
-      "latency_s": 0.444,
+      "latency_s": 0.51,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -346,7 +346,7 @@
         "DIS-005#1",
         "DIS-005#2"
       ],
-      "latency_s": 0.403,
+      "latency_s": 0.738,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -375,7 +375,7 @@
         "KYC-004#4",
         "KYC-004#6"
       ],
-      "latency_s": 0.367,
+      "latency_s": 0.622,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -389,7 +389,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -404,7 +404,7 @@
         "CC-002#4",
         "HL-003#4"
       ],
-      "latency_s": 0.517,
+      "latency_s": 1.029,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -426,14 +426,14 @@
       "id": "reason-02",
       "category": "reasoning",
       "question": "I want a home loan of ₹50 lakh. What is the maximum percentage of the property value the bank will fund?",
-      "answer": "The bank will fund up to 80 % of the property value for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
+      "answer": "The bank will fund up to **80% of the property value** for a loan amount between ₹30 lakh and ₹75 lakh. [HL-003]",
       "retrieved": [
         "HL-003#2",
         "HL-003#4",
         "HL-003#3",
         "HL-003#5"
       ],
-      "latency_s": 0.409,
+      "latency_s": 0.366,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -447,7 +447,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because the actual output perfectly aligns with the retrieval context, showing no contradictions!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -462,7 +462,7 @@
         "DIS-005#3",
         "DIS-005#4"
       ],
-      "latency_s": 0.537,
+      "latency_s": 0.546,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -476,7 +476,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -491,7 +491,7 @@
         "SAV-001#5",
         "SAV-001#1"
       ],
-      "latency_s": 0.414,
+      "latency_s": 0.57,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -505,7 +505,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -513,14 +513,14 @@
       "id": "reason-05",
       "category": "reasoning",
       "question": "I have a credit score of 760. What home loan interest rate will I get, and does it change if I am a woman applicant?",
-      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant, a concession of 0.05% applies, bringing the rate to 8.60% per annum. [HL-003]",
+      "answer": "Your credit score of 760 places you in the 750–799 bracket, so the base interest rate is 8.65% per annum. If you are a woman applicant (sole or primary co‑applicant), the bank offers a 0.05% concession, bringing the rate to 8.60% per annum. [HL-003]",
       "retrieved": [
         "HL-003#3",
         "HL-003#2",
         "HL-003#1",
         "HL-003#4"
       ],
-      "latency_s": 0.352,
+      "latency_s": 0.641,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -534,7 +534,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -549,7 +549,7 @@
         "HL-003#4",
         "HL-003#2"
       ],
-      "latency_s": 0.276,
+      "latency_s": 0.875,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -572,7 +572,7 @@
         "HL-003#2",
         "HL-003#1"
       ],
-      "latency_s": 0.384,
+      "latency_s": 0.27,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -595,7 +595,7 @@
         "HL-003#6",
         "KYC-004#3"
       ],
-      "latency_s": 0.438,
+      "latency_s": 0.432,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -618,7 +618,7 @@
         "CC-002#2",
         "SAV-001#1"
       ],
-      "latency_s": 0.361,
+      "latency_s": 0.416,
       "checks": {
         "retrieval_hit": null,
         "fact_match": null,
@@ -641,7 +641,7 @@
         "SAV-001#4",
         "SAV-001#5"
       ],
-      "latency_s": 0.209,
+      "latency_s": 0.684,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -655,7 +655,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     },
@@ -670,7 +670,7 @@
         "KYC-004#3",
         "KYC-004#5"
       ],
-      "latency_s": 0.829,
+      "latency_s": 0.506,
       "checks": {
         "retrieval_hit": true,
         "fact_match": true,
@@ -688,7 +688,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context. Great job!"
+          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output perfectly aligns with the retrieval context. Great job!"
         }
       }
     },
@@ -703,7 +703,7 @@
         "CC-002#2",
         "HL-003#4"
       ],
-      "latency_s": 0.529,
+      "latency_s": 0.624,
       "checks": {
         "retrieval_hit": true,
         "fact_match": null,
@@ -721,7 +721,7 @@
       "judge": {
         "faithfulness": {
           "score": 1.0,
-          "reason": "The score is 1.00 because there are no contradictions, indicating the actual output fully aligns with the retrieval context."
+          "reason": "The score is 1.00 because there are no contradictions, indicating perfect faithfulness to the retrieval context!"
         }
       }
     }
